@@ -21,12 +21,12 @@ public class SpringBootWithTestingApplicationTests {
 	UserDao userDao;
 
 	@Autowired
-	BusinessService businessImpl;
+	BusinessService businessService;
 
 	@Test
 	public void testFindTheGreatestFromAllData() {
 		Mockito.when(userDao.retrieveAllData()).thenReturn(new int[] { 24, 15, 3 });
-		assertEquals(24, businessImpl.findTheGreatestFromAllData());
+		assertEquals(24, businessService.findTheGreatestFromAllData());
 	}
 
 }
