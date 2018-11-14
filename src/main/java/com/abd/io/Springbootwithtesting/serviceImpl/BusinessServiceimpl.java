@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.abd.io.Springbootwithtesting.dao.BusinessDao;
 import com.abd.io.Springbootwithtesting.dao.UserDao;
+import com.abd.io.Springbootwithtesting.dto.UserRequestDto;
 import com.abd.io.Springbootwithtesting.entity.Business;
 import com.abd.io.Springbootwithtesting.service.BusinessService;
 
@@ -42,6 +43,13 @@ public class BusinessServiceimpl implements BusinessService {
 	@Override
 	public List<Business> getAllBusinesses() {
 		return businessDao.getAllBusiness();
+	}
+
+	@Override
+	public boolean setGreeting(UserRequestDto requestDto) {
+		if (requestDto.getId() == 5)
+			return false;
+		return true;
 	}
 
 }

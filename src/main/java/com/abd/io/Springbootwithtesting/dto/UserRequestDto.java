@@ -1,14 +1,13 @@
 package com.abd.io.Springbootwithtesting.dto;
 
-public class UserResponseDto {
-
+public class UserRequestDto {
 	private int id;
 	private String name;
-	
-	public UserResponseDto() {
+
+	public UserRequestDto() {
 	}
 
-	public UserResponseDto(int id, String name) {
+	public UserRequestDto(int id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
